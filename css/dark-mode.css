@@ -1,0 +1,13 @@
+
+[data-theme="dark"] .project-card,
+[data-theme="dark"] .skill-category {
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .tag {
+  background-color: #2d2d2d;
+}
+
+[data-theme="dark"] .theme-toggle {
+  background-color: #252525;
+}

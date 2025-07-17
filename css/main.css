@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --bg-sidebar: #f0f2f5;
+    --text-primary: #333333;
+    --text-secondary: #6c757d;
+    --accent-color: #4361ee;
+    --border-color: #e0e0e0;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --card-bg: #ffffff;
+  }
+  
+  [data-theme="dark"] {
+
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --bg-sidebar: #1a1a1a;
+    --text-primary: #f5f5f5;
+    --text-secondary: #a0a0a0;
+    --accent-color: #64b5f6;
+    --border-color: #333333;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    --card-bg: #1e1e1e;
+  }
+  
+ 
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  body {
+    /*
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    */
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--accent-color);
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+  .hidden {
+    display: none !important;
+  }
