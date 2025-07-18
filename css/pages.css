@@ -17,10 +17,10 @@
   
   .timeline-item {
     position: relative;
-    padding-left: 30px;
+    padding-left: 6px;
     margin-bottom: 2rem;
   }
-  
+  /*
   .timeline-item::before {
     content: "";
     position: absolute;
@@ -31,7 +31,7 @@
     border-radius: 50%;
     background-color: var(--accent-color);
   }
-  
+  */
   .timeline-item::after {
     content: "";
     position: absolute;
@@ -47,22 +47,54 @@
   }
   
   .timeline-date {
-    font-weight: 600;
-    color: var(--accent-color);
+    font-weight: 400;
     margin-bottom: 0.3rem;
+    color: var(--text-secondary);
   }
   
   .timeline-title {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
+    color: var(--accent-color);
   }
   
   .timeline-org {
     font-weight: 600;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.2rem;
     color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .company-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    border-radius: 2px;
   }
   
+  .timeline-loc {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 0.4rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+  
+  .timeline-loc i {
+    color: var(--accent-color);
+    width: 16px;
+    text-align: center;
+  }
+  [data-theme="dark"] .timeline-loc {
+    color: var(--text-secondary); /* Slightly lighter than dark text */
+  }
+  
+  [data-theme="dark"] .timeline-loc i {
+    color: var(--accent-color); /* Uses your existing accent color */
+  }
   .project-content {
     padding: 1.5rem;
   }
@@ -214,7 +246,7 @@
   }
   
   .project-desc {
-    color: var(--text-secondary);
+    color: var(--text-primary);
     margin-bottom: 1.5rem;
     flex-grow: 1;
   }
@@ -292,4 +324,57 @@
 
 .topbar a.active {
   color: var(--accent-color);
+}
+
+.timeline {
+  position: relative;
+  margin-left: 40px; /* space for the line and dots */
+  padding-left: 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--border-color);
+  border-radius: 2px;
+}
+
+.timeline-event {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -25.5px;
+  top: 32px; 
+  width: 16px;
+  height: 16px;
+  background: var(--accent-color);
+  border-radius: 90%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px var(--border-color);
+  z-index: 2;
+}
+
+.experience-card {
+
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  margin-bottom: 0;
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+}
+
+.experience-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
 }
