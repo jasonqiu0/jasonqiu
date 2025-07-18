@@ -32,7 +32,6 @@
     color: var(--text-secondary);
   }
   
-  /* Contact Links */
   .contact {
     margin: 1.5rem 0;
   }
@@ -126,8 +125,7 @@
   input:checked + .slider:before {
     transform: translateX(26px);
   }
-  
-  /* Top Navigation */
+ 
   .topbar {
     background-color: var(--bg-primary);
     padding: 1rem 0;
