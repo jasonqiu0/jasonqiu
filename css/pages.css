@@ -92,6 +92,20 @@
     border-radius: 20px;
     font-size: 0.85rem;
   }
+  .skill-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+
+  .skill-list .fas,
+  .skill-list .fab {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+  }
   
   .skills-container {
     display: grid;
