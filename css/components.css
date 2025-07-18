@@ -129,20 +129,23 @@
   .topbar {
     background-color: var(--bg-primary);
     padding: 1rem 0;
-    margin-bottom: 2rem;
     border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
-    z-index: 100;
-  }
-  
-  .topbar ul {
+    z-index: 1000;
+    width: 100%;
+}
+
+.topbar ul {
     display: flex;
     list-style: none;
     justify-content: flex-start;
     gap: 2rem;
-  }
-  
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+    
   .topbar a {
     text-decoration: none;
     color: var(--text-secondary);
@@ -166,3 +169,31 @@
     background-color: var(--accent-color);
     border-radius: 3px;
   }
+
+.theme-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.2rem;
+}
+
+.theme-icon {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.theme-switch .switch {
+  margin: 0;
+}
+
+.theme-switch label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+}

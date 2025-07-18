@@ -13,6 +13,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div class="background-wrapper">
+        <img src="assets/images/light.png" class="bg-light">
+        <img src="assets/images/dark.png" class="bg-dark">
+      </div>
+
+      <nav class="topbar">
+        <ul>
+            <li>
+              <div class="theme-switch">
+                <label class="switch">
+                  <input type="checkbox" id="dark-mode-toggle">
+                  <span class="slider round"></span>
+                  <span class="theme-icon" id="theme-icon">
+                    <i class="fas fa-sun"></i>
+                  </span>
+                </label>
+              </div>
+            </li>
+            <li><a href="#about" onclick="loadPage('about')">About</a></li>
+            <li><a href="#projects" onclick="loadPage('projects')">Projects</a></li>
+            <li><a href="#experience" onclick="loadPage('experience')">Experience</a></li>
+            <li><a href="#publications" onclick="loadPage('publications')">Publications</a></li>
+        </ul>
+    </nav>
     <div class="container">
         <aside class="sidebar">
             <div class="profile">
@@ -31,24 +55,9 @@
                 </ul>
             </div>
             
-            <div class="theme-switch">
-                <label class="switch">
-                    <input type="checkbox" id="dark-mode-toggle">
-                    <span class="slider round"></span>
-                </label>
-                <span>Dark Mode</span>
-            </div>
         </aside>
 
         <main class="main-content">
-            <nav class="topbar">
-                <ul>
-                    <li><a href="#about" onclick="loadPage('about')">About</a></li>
-                    <li><a href="#projects" onclick="loadPage('projects')">Projects</a></li>
-                    <li><a href="#experience" onclick="loadPage('experience')">Experience</a></li>
-                    <li><a href="#publications" onclick="loadPage('publications')">Publications</a></li>
-                </ul>
-            </nav>
 
             <div id="content-container">
             </div>
