@@ -79,3 +79,14 @@
     margin-bottom: 1rem;
     line-height: 1.2;
   }
+
+  .fade-out {
+    opacity: 0;
+    transition: opacity 0.1s;
+    pointer-events: none;
+  }
+  
+  .fade-in {
+    opacity: 1;
+    transition: opacity 0.4s;
+  }
