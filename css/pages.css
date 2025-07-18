@@ -63,35 +63,6 @@
     color: var(--text-secondary);
   }
   
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 1.5rem;
-  }
-  
-  .project-card {
-    background-color: var(--card-bg);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .project-image {
-    height: 180px;
-    background-color: var(--accent-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 2rem;
-  }
-  
   .project-content {
     padding: 1.5rem;
   }
@@ -155,4 +126,114 @@
   
   .skill-list i {
     color: var(--accent-color);
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    /*
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    */
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .project-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-image {
+    height: 180px;
+    background-color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  
+  .project-image i {
+    font-size: 3rem;
+  }
+  
+  .project-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  
+  .project-title {
+    font-size: 1.2rem;
+    margin: 0;
+    color: var(--accent-color);
+  }
+  
+  .project-date {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    margin-left: 1rem;
+  }
+  
+  .project-desc {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+  
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tag {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+  }
+  
+  .project-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .project-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    transition: opacity 0.2s;
+  }
+  
+  .project-links a:hover {
+    opacity: 0.8;
+    text-decoration: none;
+  }
+  
+  /* Dark mode specific adjustments */
+  [data-theme="dark"] .project-card {
+    border: 1px solid var(--border-color);
   }
